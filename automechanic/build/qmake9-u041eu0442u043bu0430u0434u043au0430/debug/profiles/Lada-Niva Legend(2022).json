@@ -1,0 +1,114 @@
+{
+    "endMonthIdx": 5,
+    "endYear": 2025,
+    "make": "Lada",
+    "mileage": 20000,
+    "model": "Niva Legend",
+    "replacements": [
+        {
+            "partName": "Амортизатор передний",
+            "season": "Лето",
+            "year": 2024
+        },
+        {
+            "partName": "Воздушный фильтр",
+            "season": "Лето",
+            "year": 2023
+        }
+    ],
+    "startMonthIdx": 0,
+    "startYear": 2022,
+    "timeline": [
+        {
+            "km": 20000,
+            "road_k": "Город",
+            "season": "Зима",
+            "year": 2022
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Весна",
+            "year": 2022
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Лето",
+            "year": 2022
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Осень",
+            "year": 2022
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Зима",
+            "year": 2023
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Весна",
+            "year": 2023
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Лето",
+            "year": 2023
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Осень",
+            "year": 2023
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Зима",
+            "year": 2024
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Весна",
+            "year": 2024
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Лето",
+            "year": 2024
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Осень",
+            "year": 2024
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Зима",
+            "year": 2025
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Весна",
+            "year": 2025
+        },
+        {
+            "km": 0,
+            "road_k": "Город",
+            "season": "Лето",
+            "year": 2025
+        }
+    ],
+    "year": 2022
+}
