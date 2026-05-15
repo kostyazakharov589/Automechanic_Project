@@ -10,16 +10,16 @@ public:
     explicit MyGLWidget(QWidget *parent = nullptr);
 
 signals:
-    // Сигнал, который отправляется при клике на определенную зону
     void zoneClicked(const QString& zoneName);
 
 protected:
     void initializeGL() override;
     void paintGL() override;
     void resizeGL(int w, int h) override;
-
-    // Перехват кликов мыши
     void mousePressEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+
 private:
-        QString selectedZone;
+    QString selectedZone;
 };

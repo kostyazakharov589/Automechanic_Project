@@ -7,7 +7,6 @@
 #include <QDebug>
 #include <QStringList>
 
-QStringList getCarMakes();
 
 class databasemanager
 {

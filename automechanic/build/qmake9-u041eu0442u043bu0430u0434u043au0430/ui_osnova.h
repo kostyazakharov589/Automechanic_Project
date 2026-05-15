@@ -42,6 +42,8 @@ public:
     QWidget *page_5;
     QComboBox *profileSelector;
     QPushButton *btnAddNewCar;
+    QPushButton *btnDeleteProfile;
+    QLabel *label;
     QWidget *page;
     QGroupBox *groupBox;
     QGridLayout *gridLayout_2;
@@ -95,7 +97,12 @@ public:
     QScrollArea *resultsScrollArea;
     QWidget *resultsLayout;
     QListWidget *listWidgetDetails;
+    QPushButton *btnExportReport;
+    QPushButton *btnPredict;
+    QPushButton *btnMaps;
     QWidget *page_7;
+    QTextEdit *textEdit_3;
+    QTextEdit *textEdit_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -103,7 +110,7 @@ public:
     {
         if (osnova->objectName().isEmpty())
             osnova->setObjectName("osnova");
-        osnova->resize(884, 607);
+        osnova->resize(886, 625);
         osnova->setStyleSheet(QString::fromUtf8("QLabel \n"
 "{\n"
 "    color: white;\n"
@@ -130,7 +137,7 @@ public:
         page_5->setObjectName("page_5");
         profileSelector = new QComboBox(page_5);
         profileSelector->setObjectName("profileSelector");
-        profileSelector->setGeometry(QRect(230, 210, 391, 51));
+        profileSelector->setGeometry(QRect(230, 230, 391, 51));
         QFont font;
         font.setFamilies({QString::fromUtf8("Segoe UI")});
         font.setBold(true);
@@ -144,27 +151,67 @@ public:
 "	font: 700 16pt \"Segoe UI\";\n"
 "    padding: 10px;\n"
 "    font-size: 16px;\n"
-"}"));
+"}\n"
+""));
         btnAddNewCar = new QPushButton(page_5);
         btnAddNewCar->setObjectName("btnAddNewCar");
-        btnAddNewCar->setGeometry(QRect(300, 330, 261, 41));
+        btnAddNewCar->setGeometry(QRect(280, 310, 121, 61));
         btnAddNewCar->setFont(font);
-        btnAddNewCar->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
+        btnAddNewCar->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    color: white;\n"
-"	background-color: rgb(63, 73, 85);\n"
+"    background-color: rgb(63, 73, 85);\n"
 "    border: 2px solid rgb(37, 106, 153);\n"
-"	font: 700 16pt \"Segoe UI\";\n"
+"    font: 700 9pt \"Segoe UI\";\n"
 "    border-radius: 10px;\n"
 "    padding: 10px;\n"
 "    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70);\n"
 "}"));
+        btnDeleteProfile = new QPushButton(page_5);
+        btnDeleteProfile->setObjectName("btnDeleteProfile");
+        btnDeleteProfile->setGeometry(QRect(450, 310, 121, 61));
+        btnDeleteProfile->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    color: white;\n"
+"    background-color: rgb(63, 73, 85);\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"    font: 700 9pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
+"}"));
+        label = new QLabel(page_5);
+        label->setObjectName("label");
+        label->setGeometry(QRect(260, 70, 331, 121));
+        label->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    border: 2px;\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"}"));
+        label->setPixmap(QPixmap(QString::fromUtf8("C:/Users/kosty/Downloads/\320\273\320\276\320\263\320\276.png")));
+        label->setScaledContents(true);
         stackedWidget->addWidget(page_5);
         page = new QWidget();
         page->setObjectName("page");
         groupBox = new QGroupBox(page);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(250, 120, 341, 261));
+        groupBox->setGeometry(QRect(250, 90, 341, 291));
         groupBox->setStyleSheet(QString::fromUtf8("QGroupBox\n"
 "{\n"
 "    color: white;\n"
@@ -224,35 +271,51 @@ public:
         btnNext = new QPushButton(page);
         btnNext->setObjectName("btnNext");
         btnNext->setGeometry(QRect(290, 390, 261, 41));
-        btnNext->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
+        btnNext->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    color: white;\n"
-"	background-color: rgb(63, 73, 85);\n"
+"    background-color: rgb(63, 73, 85);\n"
 "    border: 2px solid rgb(37, 106, 153);\n"
-"	font: 700 9pt \"Segoe UI\";\n"
+"    font: 700 9pt \"Segoe UI\";\n"
 "    border-radius: 10px;\n"
 "    padding: 10px;\n"
 "    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
 "}"));
         btnBackToCar = new QPushButton(page);
         btnBackToCar->setObjectName("btnBackToCar");
-        btnBackToCar->setGeometry(QRect(790, 500, 71, 41));
-        btnBackToCar->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
+        btnBackToCar->setGeometry(QRect(790, 520, 71, 41));
+        btnBackToCar->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    color: white;\n"
-"	background-color: rgb(63, 73, 85);\n"
+"    background-color: rgb(63, 73, 85);\n"
 "    border: 2px solid rgb(37, 106, 153);\n"
-"	font: 700 9pt \"Segoe UI\";\n"
+"    font: 700 9pt \"Segoe UI\";\n"
 "    border-radius: 10px;\n"
 "    padding: 10px;\n"
 "    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
 "}"));
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
         textEdit = new QTextEdit(page_2);
         textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(120, 20, 621, 111));
+        textEdit->setGeometry(QRect(120, 20, 621, 71));
         textEdit->setStyleSheet(QString::fromUtf8("QTextEdit\n"
 "{\n"
 "    color: white;\n"
@@ -264,15 +327,76 @@ public:
 "    font-size: 16px;\n"
 "}"));
         textEdit->setOverwriteMode(false);
+        textEdit->setTextInteractionFlags(Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse);
         radioRefine = new QRadioButton(page_2);
         radioRefine->setObjectName("radioRefine");
-        radioRefine->setGeometry(QRect(210, 150, 90, 21));
+        radioRefine->setGeometry(QRect(230, 110, 90, 21));
+        radioRefine->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    color: white;\n"
+"    font: 700 14px \"Segoe UI\";\n"
+"    spacing: 8px;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 14px;\n"
+"    height: 14px;\n"
+"    border-radius: 9px;\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"    background-color: rgb(63, 73, 85);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:hover {\n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"    background-color: rgb(75, 85, 100);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"    background-color: qradialgradient(\n"
+"        cx: 0.5, cy: 0.5, radius: 0.4, \n"
+"        fx: 0.5, fy: 0.5, \n"
+"        stop: 0 rgb(50, 150, 220), \n"
+"        stop: 0.6 rgb(50, 150, 220), \n"
+"        stop: 0.7 rgb(63, 73, 85), \n"
+"        stop: 1 rgb(63, 73, 85)\n"
+"    );\n"
+"}"));
         radioSkip = new QRadioButton(page_2);
         radioSkip->setObjectName("radioSkip");
-        radioSkip->setGeometry(QRect(560, 150, 91, 21));
+        radioSkip->setGeometry(QRect(550, 110, 111, 21));
+        radioSkip->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    color: white;\n"
+"    font: 700 14px \"Segoe UI\";\n"
+"    spacing: 8px;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 14px;\n"
+"    height: 14px;\n"
+"    border-radius: 9px;\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"    background-color: rgb(63, 73, 85);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:hover {\n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"    background-color: rgb(75, 85, 100);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"    background-color: qradialgradient(\n"
+"        cx: 0.5, cy: 0.5, radius: 0.4, \n"
+"        fx: 0.5, fy: 0.5, \n"
+"        stop: 0 rgb(50, 150, 220), \n"
+"        stop: 0.6 rgb(50, 150, 220), \n"
+"        stop: 0.7 rgb(63, 73, 85), \n"
+"        stop: 1 rgb(63, 73, 85)\n"
+"    );\n"
+"}"));
         detailsBox = new QGroupBox(page_2);
         detailsBox->setObjectName("detailsBox");
-        detailsBox->setGeometry(QRect(120, 200, 621, 351));
+        detailsBox->setGeometry(QRect(120, 140, 621, 411));
         detailsBox->setStyleSheet(QString::fromUtf8("QGroupBox\n"
 "{\n"
 "    color: white;\n"
@@ -284,25 +408,40 @@ public:
 "}"));
         btnCalculate = new QPushButton(detailsBox);
         btnCalculate->setObjectName("btnCalculate");
-        btnCalculate->setGeometry(QRect(190, 310, 231, 31));
+        btnCalculate->setGeometry(QRect(190, 370, 231, 31));
         QFont font1;
         font1.setPointSize(11);
         font1.setBold(true);
         btnCalculate->setFont(font1);
-        btnCalculate->setStyleSheet(QString::fromUtf8(""));
+        btnCalculate->setStyleSheet(QString::fromUtf8("QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
+"}"));
         verticalLayout_3 = new QScrollArea(detailsBox);
         verticalLayout_3->setObjectName("verticalLayout_3");
-        verticalLayout_3->setGeometry(QRect(10, 100, 601, 201));
+        verticalLayout_3->setGeometry(QRect(10, 100, 601, 271));
         verticalLayout_3->setWidgetResizable(true);
         timelineLayout = new QWidget();
         timelineLayout->setObjectName("timelineLayout");
-        timelineLayout->setGeometry(QRect(0, 0, 599, 199));
+        timelineLayout->setGeometry(QRect(0, 0, 599, 269));
         verticalLayout_2 = new QVBoxLayout(timelineLayout);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_3->setWidget(timelineLayout);
         btnGenerateTimeline = new QPushButton(detailsBox);
         btnGenerateTimeline->setObjectName("btnGenerateTimeline");
         btnGenerateTimeline->setGeometry(QRect(250, 70, 111, 21));
+        btnGenerateTimeline->setStyleSheet(QString::fromUtf8("QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
+"}"));
         layoutWidget = new QWidget(detailsBox);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(40, 30, 531, 31));
@@ -315,6 +454,7 @@ public:
         horizontalLayout->addWidget(spinStartYear);
 
         cmbStartMonth = new QComboBox(layoutWidget);
+        cmbStartMonth->addItem(QString());
         cmbStartMonth->addItem(QString());
         cmbStartMonth->addItem(QString());
         cmbStartMonth->addItem(QString());
@@ -347,22 +487,31 @@ public:
         cmbEndMonth->addItem(QString());
         cmbEndMonth->addItem(QString());
         cmbEndMonth->addItem(QString());
+        cmbEndMonth->addItem(QString());
         cmbEndMonth->setObjectName("cmbEndMonth");
 
         horizontalLayout->addWidget(cmbEndMonth);
 
         btnBackToCar2 = new QPushButton(page_2);
         btnBackToCar2->setObjectName("btnBackToCar2");
-        btnBackToCar2->setGeometry(QRect(790, 500, 71, 41));
-        btnBackToCar2->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
+        btnBackToCar2->setGeometry(QRect(790, 520, 71, 41));
+        btnBackToCar2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    color: white;\n"
-"	background-color: rgb(63, 73, 85);\n"
+"    background-color: rgb(63, 73, 85);\n"
 "    border: 2px solid rgb(37, 106, 153);\n"
-"	font: 700 9pt \"Segoe UI\";\n"
+"    font: 700 9pt \"Segoe UI\";\n"
 "    border-radius: 10px;\n"
 "    padding: 10px;\n"
 "    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
 "}"));
         stackedWidget->addWidget(page_2);
         page_3 = new QWidget();
@@ -381,12 +530,73 @@ public:
 "    font-size: 16px;\n"
 "}"));
         textEdit_2->setOverwriteMode(false);
+        textEdit_2->setTextInteractionFlags(Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse);
         radioReplaceYes = new QRadioButton(page_3);
         radioReplaceYes->setObjectName("radioReplaceYes");
-        radioReplaceYes->setGeometry(QRect(200, 130, 101, 21));
+        radioReplaceYes->setGeometry(QRect(200, 130, 131, 21));
+        radioReplaceYes->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    color: white;\n"
+"    font: 700 14px \"Segoe UI\";\n"
+"    spacing: 8px;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 14px;\n"
+"    height: 14px;\n"
+"    border-radius: 9px;\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"    background-color: rgb(63, 73, 85);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:hover {\n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"    background-color: rgb(75, 85, 100);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"    background-color: qradialgradient(\n"
+"        cx: 0.5, cy: 0.5, radius: 0.4, \n"
+"        fx: 0.5, fy: 0.5, \n"
+"        stop: 0 rgb(50, 150, 220), \n"
+"        stop: 0.6 rgb(50, 150, 220), \n"
+"        stop: 0.7 rgb(63, 73, 85), \n"
+"        stop: 1 rgb(63, 73, 85)\n"
+"    );\n"
+"}"));
         radioReplaceSkip = new QRadioButton(page_3);
         radioReplaceSkip->setObjectName("radioReplaceSkip");
-        radioReplaceSkip->setGeometry(QRect(540, 130, 121, 21));
+        radioReplaceSkip->setGeometry(QRect(520, 130, 151, 21));
+        radioReplaceSkip->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    color: white;\n"
+"    font: 700 14px \"Segoe UI\";\n"
+"    spacing: 8px;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 14px;\n"
+"    height: 14px;\n"
+"    border-radius: 9px;\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"    background-color: rgb(63, 73, 85);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:hover {\n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"    background-color: rgb(75, 85, 100);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    border: 2px solid rgb(50, 150, 220);\n"
+"    background-color: qradialgradient(\n"
+"        cx: 0.5, cy: 0.5, radius: 0.4, \n"
+"        fx: 0.5, fy: 0.5, \n"
+"        stop: 0 rgb(50, 150, 220), \n"
+"        stop: 0.6 rgb(50, 150, 220), \n"
+"        stop: 0.7 rgb(63, 73, 85), \n"
+"        stop: 1 rgb(63, 73, 85)\n"
+"    );\n"
+"}"));
         replaceBox = new QGroupBox(page_3);
         replaceBox->setObjectName("replaceBox");
         replaceBox->setGeometry(QRect(130, 180, 581, 361));
@@ -403,6 +613,14 @@ public:
         btnGoToResults->setObjectName("btnGoToResults");
         btnGoToResults->setGeometry(QRect(180, 320, 231, 31));
         btnGoToResults->setFont(font1);
+        btnGoToResults->setStyleSheet(QString::fromUtf8("QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
+"}"));
         cmbReplacedPart = new QComboBox(replaceBox);
         cmbReplacedPart->setObjectName("cmbReplacedPart");
         cmbReplacedPart->setGeometry(QRect(20, 40, 111, 24));
@@ -415,81 +633,232 @@ public:
         btnAddReplacement = new QPushButton(replaceBox);
         btnAddReplacement->setObjectName("btnAddReplacement");
         btnAddReplacement->setGeometry(QRect(20, 280, 111, 24));
+        btnAddReplacement->setStyleSheet(QString::fromUtf8("QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
+"}"));
         listReplacements = new QListWidget(replaceBox);
         listReplacements->setObjectName("listReplacements");
         listReplacements->setGeometry(QRect(140, 40, 421, 261));
         btnBackToSeasons = new QPushButton(page_3);
         btnBackToSeasons->setObjectName("btnBackToSeasons");
-        btnBackToSeasons->setGeometry(QRect(790, 500, 71, 41));
-        btnBackToSeasons->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
+        btnBackToSeasons->setGeometry(QRect(790, 520, 71, 41));
+        btnBackToSeasons->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    color: white;\n"
-"	background-color: rgb(63, 73, 85);\n"
+"    background-color: rgb(63, 73, 85);\n"
 "    border: 2px solid rgb(37, 106, 153);\n"
-"	font: 700 9pt \"Segoe UI\";\n"
+"    font: 700 9pt \"Segoe UI\";\n"
 "    border-radius: 10px;\n"
 "    padding: 10px;\n"
 "    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
 "}"));
         stackedWidget->addWidget(page_3);
         page_4 = new QWidget();
         page_4->setObjectName("page_4");
         verticalLayoutWidget = new QWidget(page_4);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(40, 30, 821, 471));
+        verticalLayoutWidget->setGeometry(QRect(20, 30, 841, 491));
         verticalLayout_results = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout_results->setObjectName("verticalLayout_results");
         verticalLayout_results->setContentsMargins(0, 0, 0, 0);
         btnRestart = new QPushButton(page_4);
         btnRestart->setObjectName("btnRestart");
-        btnRestart->setGeometry(QRect(10, 500, 81, 41));
-        btnRestart->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
+        btnRestart->setGeometry(QRect(0, 520, 81, 41));
+        btnRestart->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    color: white;\n"
-"	background-color: rgb(63, 73, 85);\n"
+"    background-color: rgb(63, 73, 85);\n"
 "    border: 2px solid rgb(37, 106, 153);\n"
-"	font: 700 9pt \"Segoe UI\";\n"
+"    font: 700 9pt \"Segoe UI\";\n"
 "    border-radius: 10px;\n"
 "    padding: 10px;\n"
 "    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
 "}"));
         btnBackToHistory = new QPushButton(page_4);
         btnBackToHistory->setObjectName("btnBackToHistory");
-        btnBackToHistory->setGeometry(QRect(790, 500, 71, 41));
-        btnBackToHistory->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
+        btnBackToHistory->setGeometry(QRect(790, 520, 71, 41));
+        btnBackToHistory->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    color: white;\n"
-"	background-color: rgb(63, 73, 85);\n"
+"    background-color: rgb(63, 73, 85);\n"
 "    border: 2px solid rgb(37, 106, 153);\n"
-"	font: 700 9pt \"Segoe UI\";\n"
+"    font: 700 9pt \"Segoe UI\";\n"
 "    border-radius: 10px;\n"
 "    padding: 10px;\n"
 "    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
 "}"));
         stackedWidget_2 = new QStackedWidget(page_4);
         stackedWidget_2->setObjectName("stackedWidget_2");
-        stackedWidget_2->setGeometry(QRect(58, 38, 801, 461));
+        stackedWidget_2->setGeometry(QRect(38, 38, 821, 471));
         page_6 = new QWidget();
         page_6->setObjectName("page_6");
         openGLWidget = new MyGLWidget(page_6);
         openGLWidget->setObjectName("openGLWidget");
-        openGLWidget->setGeometry(QRect(30, 10, 361, 211));
+        openGLWidget->setGeometry(QRect(0, 30, 381, 211));
         openGLWidget->setMinimumSize(QSize(250, 100));
+        openGLWidget->setStyleSheet(QString::fromUtf8("MyGLWidget\n"
+"{\n"
+"    color: white;\n"
+"	background-color: rgb(63, 73, 85);\n"
+"	border: 3px solid  rgb(37, 106, 153);\n"
+"	font: 700 16pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    font-size: 16px;\n"
+"}"));
         resultsScrollArea = new QScrollArea(page_6);
         resultsScrollArea->setObjectName("resultsScrollArea");
-        resultsScrollArea->setGeometry(QRect(399, 9, 391, 431));
+        resultsScrollArea->setGeometry(QRect(389, 29, 401, 431));
+        resultsScrollArea->setStyleSheet(QString::fromUtf8("QScrollArea\n"
+"{\n"
+"    color: white;\n"
+"	border: 3px solid  rgb(37, 106, 153);\n"
+"	font: 700 12pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    font-size: 12px;\n"
+"}"));
         resultsScrollArea->setWidgetResizable(true);
         resultsLayout = new QWidget();
         resultsLayout->setObjectName("resultsLayout");
-        resultsLayout->setGeometry(QRect(0, 0, 389, 429));
+        resultsLayout->setGeometry(QRect(0, 0, 395, 425));
         resultsScrollArea->setWidget(resultsLayout);
         listWidgetDetails = new QListWidget(page_6);
         listWidgetDetails->setObjectName("listWidgetDetails");
-        listWidgetDetails->setGeometry(QRect(30, 230, 361, 211));
+        listWidgetDetails->setGeometry(QRect(0, 250, 311, 211));
+        listWidgetDetails->setStyleSheet(QString::fromUtf8("QListWidget\n"
+"{\n"
+"    color: white;\n"
+"	border: 3px solid  rgb(37, 106, 153);\n"
+"	font: 700 12pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    font-size: 12px;\n"
+"}"));
+        btnExportReport = new QPushButton(page_6);
+        btnExportReport->setObjectName("btnExportReport");
+        btnExportReport->setGeometry(QRect(320, 260, 61, 51));
+        btnExportReport->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    color: white;\n"
+"    background-color: rgb(63, 73, 85);\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"    font: 700 9pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
+"}"));
+        btnPredict = new QPushButton(page_6);
+        btnPredict->setObjectName("btnPredict");
+        btnPredict->setGeometry(QRect(320, 330, 61, 51));
+        btnPredict->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    color: white;\n"
+"    background-color: rgb(63, 73, 85);\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"    font: 700 9pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
+"}"));
+        btnMaps = new QPushButton(page_6);
+        btnMaps->setObjectName("btnMaps");
+        btnMaps->setGeometry(QRect(320, 400, 61, 51));
+        btnMaps->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    color: white;\n"
+"    background-color: rgb(63, 73, 85);\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"    font: 700 9pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    font-size: 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(75, 85, 100); \n"
+"    border: 2px solid rgb(50, 150, 220); \n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(50, 60, 70); \n"
+"}"));
         stackedWidget_2->addWidget(page_6);
         page_7 = new QWidget();
         page_7->setObjectName("page_7");
         stackedWidget_2->addWidget(page_7);
+        textEdit_3 = new QTextEdit(page_4);
+        textEdit_3->setObjectName("textEdit_3");
+        textEdit_3->setGeometry(QRect(430, 0, 401, 61));
+        textEdit_3->setStyleSheet(QString::fromUtf8("QTextEdit\n"
+"{\n"
+"    color: white;\n"
+"	background-color: rgb(63, 73, 85);\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"	font: 700 16pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    font-size: 16px;\n"
+"}"));
+        textEdit_3->setOverwriteMode(false);
+        textEdit_3->setTextInteractionFlags(Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse);
+        textEdit_4 = new QTextEdit(page_4);
+        textEdit_4->setObjectName("textEdit_4");
+        textEdit_4->setGeometry(QRect(30, 0, 391, 61));
+        textEdit_4->setStyleSheet(QString::fromUtf8("QTextEdit\n"
+"{\n"
+"    color: white;\n"
+"	background-color: rgb(63, 73, 85);\n"
+"    border: 2px solid rgb(37, 106, 153);\n"
+"	font: 700 16pt \"Segoe UI\";\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    font-size: 16px;\n"
+"}"));
+        textEdit_4->setOverwriteMode(false);
+        textEdit_4->setTextInteractionFlags(Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse);
         stackedWidget->addWidget(page_4);
 
         gridLayout->addWidget(stackedWidget, 0, 0, 1, 1);
@@ -497,7 +866,7 @@ public:
         osnova->setCentralWidget(centralwidget);
         menubar = new QMenuBar(osnova);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 884, 21));
+        menubar->setGeometry(QRect(0, 0, 886, 21));
         osnova->setMenuBar(menubar);
         statusbar = new QStatusBar(osnova);
         statusbar->setObjectName("statusbar");
@@ -505,7 +874,8 @@ public:
 
         retranslateUi(osnova);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(0);
+        stackedWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(osnova);
@@ -517,7 +887,9 @@ public:
 #if QT_CONFIG(tooltip)
         profileSelector->setToolTip(QCoreApplication::translate("osnova", "<html><head/><body><p>\320\241\321\203\321\211\320\265\321\201\321\202\320\262\321\203\321\216\321\211\320\270\320\265 \320\277\321\200\320\276\321\204\320\270\320\273\320\270</p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
-        btnAddNewCar->setText(QCoreApplication::translate("osnova", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\275\320\276\320\262\321\213\320\271 \320\260\320\262\321\202\320\276\320\274\320\276\320\261\320\270\320\273\321\214", nullptr));
+        btnAddNewCar->setText(QCoreApplication::translate("osnova", "\342\234\205\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
+        btnDeleteProfile->setText(QCoreApplication::translate("osnova", "\342\235\214\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
+        label->setText(QString());
         groupBox->setTitle(QCoreApplication::translate("osnova", "\320\221\320\260\320\267\320\276\320\262\321\213\320\271 \320\277\321\200\320\276\321\204\320\270\320\273\321\214 \320\260\320\262\321\202\320\276\320\274\320\276\320\261\320\270\320\273\321\217", nullptr));
         Label_3->setText(QCoreApplication::translate("osnova", "\320\223\320\276\320\264 \320\262\321\213\320\277\321\203\321\201\320\272\320\260", nullptr));
         Label_4->setText(QCoreApplication::translate("osnova", "\320\221\320\260\320\267\320\276\320\262\321\213\320\271 \320\277\321\200\320\276\320\261\320\265\320\263", nullptr));
@@ -532,9 +904,7 @@ public:
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:16px; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; font-weight:400;\">\320\245\320\276\321\202\320\270\321\202\320\265 \320\273\320\270 \320\262\321\213 \321\203\321\202\320\276\321\207\320\275\320\270\321\202\321\214 </span><span style=\" font-size:14pt;\">\320\277\321\200\320\276\320\261\320\265\320\263 \320\260\320\262\321\202\320\276\320\274\320\276\320\261\320\270\320\273\321\217? </span><span styl"
-                        "e=\" font-size:14pt; font-weight:400;\">\320\255\321\202\320\276 \320\277\320\276\320\274\320\276\320\266\320\265\321\202 \320\277\321\200\320\276\320\263\321\200\320\260\320\274\320\274\320\265</span><span style=\" font-size:14pt;\"> \320\261\320\276\320\273\320\265\320\265 \321\202\320\276\321\207\320\275\320\276</span><span style=\" font-size:14pt; font-weight:400;\"> \320\276\320\277\321\200\320\265\320\264\320\265\320\273\320\270\321\202\321\214 \321\201\321\202\320\265\320\277\320\265\320\275\321\214 \320\270\320\267\320\275\320\276\321\201\320\260 \320\264\320\265\321\202\320\260\320\273\320\265\320\271 \320\270 \320\265\320\263\320\276 \321\202\320\265\320\272\321\203\321\211\320\265\320\265 \321\201\320\276\321\201\321\202\320\276\321\217\320\275\320\270\320\265. \320\255\321\202\320\276\321\202 \320\277\320\260\321\200\320\260\320\274\320\265\321\202\321\200 </span><span style=\" font-size:14pt;\">\320\262\321\201\320\265\320\263\320\264\320\260</span><span style=\" font-size:14pt; font-weight:400;\""
-                        "> \320\274\320\276\320\266\320\275\320\276 </span><span style=\" font-size:14pt;\">\320\270\320\267\320\274\320\265\320\275\320\270\321\202\321\214</span><span style=\" font-size:14pt; font-weight:400;\">.</span></p></body></html>", nullptr));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">\320\224\320\265\321\202\320\260\320\273\320\270\320\267\320\260\321\206\320\270\321\217 \320\277\321\200\320\276\320\261\320\265\320\263\320\260 \320\262\321\213\320\261\321\200\320\260\320\275\320\275\320\276\320\263\320\276 \320\260\320\262\321\202\320\276\320\274\320\276\320\261\320\270\320\273\321\217</span></p></body></html>", nullptr));
         radioRefine->setText(QCoreApplication::translate("osnova", "\320\243\321\202\320\276\321\207\320\275\320\270\321\202\321\214", nullptr));
         radioSkip->setText(QCoreApplication::translate("osnova", "\320\237\321\200\320\276\320\277\321\203\321\201\321\202\320\270\321\202\321\214 ", nullptr));
         detailsBox->setTitle(QCoreApplication::translate("osnova", "                                                   \320\224\320\225\320\242\320\220\320\233\320\230\320\227\320\220\320\246\320\230\320\257 \320\237\320\240\320\236\320\221\320\225\320\223\320\220", nullptr));
@@ -544,25 +914,27 @@ public:
         cmbStartMonth->setItemText(1, QCoreApplication::translate("osnova", "\320\244\320\265\320\262\321\200\320\260\320\273\321\214", nullptr));
         cmbStartMonth->setItemText(2, QCoreApplication::translate("osnova", "\320\234\320\260\321\200\321\202", nullptr));
         cmbStartMonth->setItemText(3, QCoreApplication::translate("osnova", "\320\220\320\277\321\200\320\265\320\273\321\214", nullptr));
-        cmbStartMonth->setItemText(4, QCoreApplication::translate("osnova", "\320\230\321\216\320\275\321\214", nullptr));
-        cmbStartMonth->setItemText(5, QCoreApplication::translate("osnova", "\320\230\321\216\320\273\321\214", nullptr));
-        cmbStartMonth->setItemText(6, QCoreApplication::translate("osnova", "\320\220\320\262\320\263\321\203\321\201\321\202", nullptr));
-        cmbStartMonth->setItemText(7, QCoreApplication::translate("osnova", "\320\241\320\265\320\275\321\202\321\217\320\261\321\200\321\214", nullptr));
-        cmbStartMonth->setItemText(8, QCoreApplication::translate("osnova", "\320\236\320\272\321\202\321\217\320\261\321\200\321\214", nullptr));
-        cmbStartMonth->setItemText(9, QCoreApplication::translate("osnova", "\320\235\320\276\321\217\320\261\321\200\321\214", nullptr));
-        cmbStartMonth->setItemText(10, QCoreApplication::translate("osnova", "\320\224\320\265\320\272\320\260\320\261\321\200\321\214", nullptr));
+        cmbStartMonth->setItemText(4, QCoreApplication::translate("osnova", "\320\234\320\260\320\271", nullptr));
+        cmbStartMonth->setItemText(5, QCoreApplication::translate("osnova", "\320\230\321\216\320\275\321\214", nullptr));
+        cmbStartMonth->setItemText(6, QCoreApplication::translate("osnova", "\320\230\321\216\320\273\321\214", nullptr));
+        cmbStartMonth->setItemText(7, QCoreApplication::translate("osnova", "\320\220\320\262\320\263\321\203\321\201\321\202", nullptr));
+        cmbStartMonth->setItemText(8, QCoreApplication::translate("osnova", "\320\241\320\265\320\275\321\202\321\217\320\261\321\200\321\214", nullptr));
+        cmbStartMonth->setItemText(9, QCoreApplication::translate("osnova", "\320\236\320\272\321\202\321\217\320\261\321\200\321\214", nullptr));
+        cmbStartMonth->setItemText(10, QCoreApplication::translate("osnova", "\320\235\320\276\321\217\320\261\321\200\321\214", nullptr));
+        cmbStartMonth->setItemText(11, QCoreApplication::translate("osnova", "\320\224\320\265\320\272\320\260\320\261\321\200\321\214", nullptr));
 
         cmbEndMonth->setItemText(0, QCoreApplication::translate("osnova", "\320\257\320\275\320\262\320\260\321\200\321\214", nullptr));
         cmbEndMonth->setItemText(1, QCoreApplication::translate("osnova", "\320\244\320\265\320\262\321\200\320\260\320\273\321\214", nullptr));
         cmbEndMonth->setItemText(2, QCoreApplication::translate("osnova", "\320\234\320\260\321\200\321\202", nullptr));
         cmbEndMonth->setItemText(3, QCoreApplication::translate("osnova", "\320\220\320\277\321\200\320\265\320\273\321\214", nullptr));
-        cmbEndMonth->setItemText(4, QCoreApplication::translate("osnova", "\320\230\321\216\320\275\321\214", nullptr));
-        cmbEndMonth->setItemText(5, QCoreApplication::translate("osnova", "\320\230\321\216\320\273\321\214", nullptr));
-        cmbEndMonth->setItemText(6, QCoreApplication::translate("osnova", "\320\220\320\262\320\263\321\203\321\201\321\202", nullptr));
-        cmbEndMonth->setItemText(7, QCoreApplication::translate("osnova", "\320\241\320\265\320\275\321\202\321\217\320\261\321\200\321\214", nullptr));
-        cmbEndMonth->setItemText(8, QCoreApplication::translate("osnova", "\320\236\320\272\321\202\321\217\320\261\321\200\321\214", nullptr));
-        cmbEndMonth->setItemText(9, QCoreApplication::translate("osnova", "\320\235\320\276\321\217\320\261\321\200\321\214", nullptr));
-        cmbEndMonth->setItemText(10, QCoreApplication::translate("osnova", "\320\224\320\265\320\272\320\260\320\261\321\200\321\214", nullptr));
+        cmbEndMonth->setItemText(4, QCoreApplication::translate("osnova", "\320\234\320\260\320\271", nullptr));
+        cmbEndMonth->setItemText(5, QCoreApplication::translate("osnova", "\320\230\321\216\320\275\321\214", nullptr));
+        cmbEndMonth->setItemText(6, QCoreApplication::translate("osnova", "\320\230\321\216\320\273\321\214", nullptr));
+        cmbEndMonth->setItemText(7, QCoreApplication::translate("osnova", "\320\220\320\262\320\263\321\203\321\201\321\202", nullptr));
+        cmbEndMonth->setItemText(8, QCoreApplication::translate("osnova", "\320\241\320\265\320\275\321\202\321\217\320\261\321\200\321\214", nullptr));
+        cmbEndMonth->setItemText(9, QCoreApplication::translate("osnova", "\320\236\320\272\321\202\321\217\320\261\321\200\321\214", nullptr));
+        cmbEndMonth->setItemText(10, QCoreApplication::translate("osnova", "\320\235\320\276\321\217\320\261\321\200\321\214", nullptr));
+        cmbEndMonth->setItemText(11, QCoreApplication::translate("osnova", "\320\224\320\265\320\272\320\260\320\261\321\200\321\214", nullptr));
 
         btnBackToCar2->setText(QCoreApplication::translate("osnova", "\320\235\320\260\320\267\320\260\320\264", nullptr));
         textEdit_2->setHtml(QCoreApplication::translate("osnova", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -582,6 +954,25 @@ public:
         btnBackToSeasons->setText(QCoreApplication::translate("osnova", "\320\235\320\260\320\267\320\260\320\264", nullptr));
         btnRestart->setText(QCoreApplication::translate("osnova", "\320\235\320\260\321\207\320\260\320\273\320\276", nullptr));
         btnBackToHistory->setText(QCoreApplication::translate("osnova", "\320\235\320\260\320\267\320\260\320\264", nullptr));
+        btnExportReport->setText(QCoreApplication::translate("osnova", "\320\230\321\202\320\276\320\263", nullptr));
+        btnPredict->setText(QCoreApplication::translate("osnova", "\360\237\223\210", nullptr));
+        btnMaps->setText(QCoreApplication::translate("osnova", "\360\237\227\272\357\270\217", nullptr));
+        textEdit_3->setHtml(QCoreApplication::translate("osnova", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:16px; font-weight:700; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\320\241\320\276\321\201\321\202\320\276\321\217\320\275\320\270\320\265 \320\267\320\260\320\277\321\207\320\260\321\201\321\202\320\265\320\271</p></body></html>", nullptr));
+        textEdit_4->setHtml(QCoreApplication::translate("osnova", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:16px; font-weight:700; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\320\220\320\262\321\202\320\276 \320\270 \321\201\321\201\321\213\320\273\320\272\320\270</p></body></html>", nullptr));
     } // retranslateUi
 
 };

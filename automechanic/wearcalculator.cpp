@@ -17,25 +17,26 @@ void WearCalculator::setCatalog(const QMap<QString, int>& catalog) {
     partCatalog = catalog;//копируем каталог
 }
 
-double WearCalculator::calculateDistributedKm(int baseMileage, const QList<CalcSeasonData>& history) {//функция для подсчёта км
-    double userEntered = 0;//введённые
-    int emptyActive = 0;//пустые
+double WearCalculator::calculateDistributedKm(int baseMileage, const QList<CalcSeasonData>& history) {//функция для подсчёта км если больше 0 и не гараж
+    double userEntered = 0.0;//введённое
+    int emptyActive = 0;//пустое
 
-    for (const auto& entry : history) {
-        if (entry.km > 0) {
-            userEntered += entry.km;//записываем введённые
-        } else if (!entry.roadType.contains("0.0")) {
-            emptyActive++; // Считаем пустые сезоны игнорируя гараж
+    for (const auto& entry : history) {//перебираем
+        if (entry.km > 0.0) {//если больше 0, то скалдываем с введённым юзером
+            userEntered += entry.km;
+        }
+        else if (entry.roadType != "Гараж") { //если гараж -  с пустым
+            emptyActive++;
         }
     }
 
     if (emptyActive > 0 && baseMileage > userEntered) {
-        return (baseMileage - userEntered) / emptyActive;//возвращаем среднее
+        return (baseMileage - userEntered) / emptyActive;//возвращаем среднее от пустого и введённого
     }
     return 0;
 }
 
-QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSeasonData>& history, const QList<CalcReplaceData>& replacements) {//калькулятор иноса!!!
+QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSeasonData>& history, const QList<CalcReplaceData>& replacements) {//калькулятор иноса!!! САМОЕ ГЛАВНОЕ
     QList<PartResult> results;//запчасти
 
     int currentYear = 0;
@@ -72,12 +73,13 @@ QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSea
             if (!countStarted) {
                 if (entry.year == startYear && entry.season == startSeason) {
                     countStarted = true;
-                }
+                } else{
                 continue;
+                }
             }
 
             double km = entry.km;
-            if (km == 0 && !entry.roadType.contains("Гараж")) {
+            if (km == 0 && entry.roadType != "Гараж") {
                 km = distributedKm;
             }
 
@@ -104,10 +106,9 @@ QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSea
     int suspensionWear = 0;
     int suspensionPartsCount = 0;
 
-    // Вычисляем среднюю "убитость" подвески
-    for (const auto& res : results) {
+    for (const auto& res : std::as_const(results)) { // вычисление убитости подвестки без лишнего копирования массива
         if (res.partName.contains("Амортизатор") || res.partName.contains("Рычаг") || res.partName.contains("Стойка")) {
-            suspensionWear += res.wearPercent;
+            suspensionWear += res.wearPercent;//добавляем к проценту и
             suspensionPartsCount++;
         }
     }
@@ -129,4 +130,28 @@ QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSea
     }
 
     return results;//наш результатик
+}
+QList<PredictionData> WearCalculator::predictService(const QList<PartResult>& results, double dailyKm) {//тут калькулятор прогноза
+    QList<PredictionData> predictions;
+    if (dailyKm <= 0) dailyKm = 40.0;
+
+    QList<PartResult> sorted = results;//от большего к меньшему
+    std::sort(sorted.begin(), sorted.end(), [](const PartResult& a, const PartResult& b) {
+        return a.wearPercent > b.wearPercent;
+    });
+
+    for (const auto& res : std::as_const(sorted)) {//будем брать от 59 до 99 процентов
+        if (res.wearPercent >= 60 && res.wearPercent < 100) {
+            int totalResource = partCatalog.value(res.partName, 0);
+            if (totalResource > 0) {
+                PredictionData p;
+                p.partName = res.partName;
+                p.wearPercent = res.wearPercent;
+                p.remainingKm = totalResource * (1.0 - (p.wearPercent / 100.0));
+                p.daysLeft = static_cast<int>(p.remainingKm / dailyKm);
+                predictions.append(p);
+            }
+        }
+    }
+    return predictions;
 }

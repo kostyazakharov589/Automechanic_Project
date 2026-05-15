@@ -17,7 +17,7 @@ QT_END_NAMESPACE
 struct SeasonEntry {//структура для разбивки по сезонам
     int year;
     QString seasonName;
-    QSpinBox* spinKm;  //указатели на км и тип дороги
+    QDoubleSpinBox* spinKm;  //указатели на км и тип дороги
     QComboBox* cmbRoad;
 };
 struct ReplacedPart {//структура для замены
@@ -47,5 +47,9 @@ private:
     void calculateFinalWear();//подсчёт замен
     QList<PartResult> finalResults;//opengl
     bool isPartInZone(const QString& partName, const QStringList& categories);//роль маршрутизатора между зоной клика по 3D-модели автомобиля и конкретной запчастью из рассчитанного списка
+    void exportReport();//делаем репорт по нашей машине
+    void deleteSelectedProfile();//ф для удаления профилей машинок
+    void showTOPrediction(); // рассчёт даты прогнозируемого ремонта
+    void openMapsForService(); //открываем поиск сто в картах
 };
 #endif // OSNOVA_H

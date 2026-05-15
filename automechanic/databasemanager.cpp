@@ -2,6 +2,7 @@
 #include <QDir>
 #include <algorithm>
 #include <QFileInfo>
+#include <QCoreApplication>
 
 databasemanager::databasemanager() {}//конструктор базы
 
@@ -12,11 +13,11 @@ databasemanager::~databasemanager()//деконструкторк для её з
     QSqlDatabase db = QSqlDatabase::database(QSqlDatabase::defaultConnection, false);//безопасный выход из дб без зависаний
     if (db.isValid()) {
         connectionName = db.connectionName();
-        if (db.isOpen()) {
+        if (db.isOpen()) {//после закрытия программы закрываем базу данных, без неё она криво работает
             db.close();
         }
     }
-    if (!connectionName.isEmpty()) {
+    if (!connectionName.isEmpty()) {//удаляем
         QSqlDatabase::removeDatabase(connectionName);
     }
 }
@@ -28,10 +29,11 @@ bool databasemanager::connectToDataBase()
     }
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("cars_database.db");//берём файл
+    QString dbPath = QCoreApplication::applicationDirPath() + "/cars_database.db";//берём бд из папки рядом, на других компах она просто пустую бд до этого клипала
+    db.setDatabaseName(dbPath);
 
-    if (!db.open()) {//на случай ошибок
-        qDebug() << "Ошибка при открытии БД:" << db.lastError().text();
+   if (!db.open()) {//на случай ошибок
+       qDebug() << "Ошибка при открытии БД:" << db.lastError().text();
         return false;
     }
 
@@ -53,7 +55,7 @@ bool databasemanager::createTable(){//создание бд
                   "year INTEGER NOT NULL, "
                   "mileage INTEGER NOT NULL"
                   ");";
-    if (!query.exec(str)) {
+    if (!query.exec(str)) {//если не открылась nf,kbwf b ,tp yt` ybxt yt hf,ftn
         qDebug() << "Ошибка создания таблицы " << query.lastError().text();
         return false;
     }

@@ -1047,7 +1047,22 @@ debug\databasemanager.obj: ..\..\databasemanager.cpp ..\..\databasemanager.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qfile.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qfileinfo.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qtimezone.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QFileInfo
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QFileInfo \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QCoreApplication \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qcoreapplication.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qnativeinterface.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qcoreapplication_platform.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qfuture.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qfutureinterface.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qmutex.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qtsan_impl.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qresultstore.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qfuture_impl.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qthreadpool.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qthread.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qrunnable.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qexception.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qpromise.h
 
 debug\main.obj: ..\..\main.cpp ..\..\osnova.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\QMainWindow \
@@ -1500,13 +1515,17 @@ debug\myglwidget.obj: ..\..\myglwidget.cpp ..\..\myglwidget.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtGui\QOpenGLFunctions \
 		C:\Qt\6.9.0\msvc2022_64\include\QtGui\qopenglfunctions.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtGui\qopenglcontext.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtGui\qopenglcontext_platform.h
+		C:\Qt\6.9.0\msvc2022_64\include\QtGui\qopenglcontext_platform.h \
+		..\..\mypainter.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QString \
+		C:\Qt\6.9.0\msvc2022_64\include\QtGui\QCursor \
+		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\QToolTip \
+		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\qtooltip.h
 
 debug\mypainter.obj: ..\..\mypainter.cpp ..\..\mypainter.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtOpenGL\QtOpenGL \
-		C:\Qt\6.9.0\msvc2022_64\include\QtOpenGL\QtOpenGLDepends \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QtCore \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QtCoreDepends \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QString \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qstring.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qchar.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qglobal.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qtcoreglobal.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qtversionchecks.h \
@@ -1553,40 +1572,24 @@ debug\mypainter.obj: ..\..\mypainter.cpp ..\..\mypainter.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qtresource.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qttranslation.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qversiontagging.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q17memory.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20algorithm.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20functional.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20chrono.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20iterator.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20map.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20memory.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20type_traits.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20utility.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20vector.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q23functional.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q23utility.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q26numeric.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qabstractanimation.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qobject.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qobjectdefs.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qnamespace.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qcompare.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qstdlibdetection.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qcomparehelpers.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qtmetamacros.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qobjectdefs_impl.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qfunctionaltools_impl.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qstring.h \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qchar.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20type_traits.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qstringview.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qbytearray.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qrefcount.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qnamespace.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qtmetamacros.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qarraydata.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qpair.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qarraydatapointer.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qarraydataops.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qcontainertools_impl.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qxptype_traits.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20functional.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20memory.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q17memory.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qbytearrayalgorithms.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qbytearrayview.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qstringfwd.h \
@@ -1599,6 +1602,24 @@ debug\mypainter.obj: ..\..\mypainter.cpp ..\..\mypainter.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qstringbuilder.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qstringconverter.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qstringconverter_base.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtOpenGL\QtOpenGL \
+		C:\Qt\6.9.0\msvc2022_64\include\QtOpenGL\QtOpenGLDepends \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QtCore \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QtCoreDepends \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20algorithm.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20chrono.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20iterator.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20map.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20utility.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q20vector.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q23functional.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q23utility.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\q26numeric.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qabstractanimation.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qobject.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qfunctionaltools_impl.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qlist.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qhashfunctions.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qiterator.h \
@@ -1775,7 +1796,6 @@ debug\mypainter.obj: ..\..\mypainter.cpp ..\..\mypainter.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qvarianthash.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QHash \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QVariant \
-		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QString \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qvariantlist.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QList \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\qvariantmap.h \
@@ -2268,7 +2288,13 @@ debug\osnova.obj: ..\..\osnova.cpp ..\..\osnova.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtGui\QDesktopServices \
 		C:\Qt\6.9.0\msvc2022_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\QProgressBar \
-		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\qprogressbar.h
+		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\qprogressbar.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\QFileDialog \
+		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QTextStream \
+		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QDateTime \
+		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\QInputDialog \
+		C:\Qt\6.9.0\msvc2022_64\include\QtWidgets\qinputdialog.h
 
 debug\wearcalculator.obj: ..\..\wearcalculator.cpp ..\..\wearcalculator.h \
 		C:\Qt\6.9.0\msvc2022_64\include\QtCore\QString \
