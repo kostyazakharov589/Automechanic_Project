@@ -1,0 +1,104 @@
+       ДИАГНОСТИЧЕСКАЯ КАРТА АВТОМОБИЛЯ             
+Дата осмотра: 15.05.2026 19:46
+Автомобиль:   Haval Dargo
+Год выпуска:  2024
+Общий пробег: 20000 км
+
+ДЕТАЛИЗАЦИЯ ПО СЕЗОНАМ (История владения):
+  Год |   Сезон |  Пробег (км) | Тип дороги
+ 2024 |    Зима |       2000.0 | Бездорожье
+ 2024 |   Весна |       1000.0 | Грунтовые
+ 2024 |    Лето |       1896.0 | Гараж
+ 2024 |   Осень |       1888.0 | Трасса
+ 2025 |    Зима |       1888.0 | Город
+ 2025 |   Весна |       1888.0 | Город
+ 2025 |    Лето |       1888.0 | Город
+ 2025 |   Осень |       1888.0 | Город
+ 2026 |    Зима |       1888.0 | Город
+ 2026 |   Весна |       1888.0 | Город
+ 2026 |    Лето |       1888.0 | Город
+ 
+
+ПРОГНОЗ ДАТ СЛЕДУЮЩЕГО ОБСЛУЖИВАНИЯ:
+- Топливный фильтр: замена через 8700 км (ориентировочно 19.07.2027)
+- Свеча зажигания: замена через 8700 км (ориентировочно 19.07.2027)
+- Лампа ближнего света: замена через 8700 км (ориентировочно 19.07.2027)
+ 
+КРИТИЧЕСКИЙ ИЗНОС (замена):
+- Масляный фильтр          : 100%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%9C%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%9C%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80
+
+- Салонный фильтр          : 100%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80
+
+- Щетки стеклоочистителя   : 100%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%A9%D0%B5%D1%82%D0%BA%D0%B8%20%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%B8%D1%82%D0%B5%D0%BB%D1%8F
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%A9%D0%B5%D1%82%D0%BA%D0%B8%20%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE%D0%BE%D1%87%D0%B8%D1%81%D1%82%D0%B8%D1%82%D0%B5%D0%BB%D1%8F
+
+СРЕДНИЙ ИЗНОС (Бригада автомехаников, обратите внимание):
+- Втулка стабилизатора     : 53%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%92%D1%82%D1%83%D0%BB%D0%BA%D0%B0%20%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D0%B8%D0%B7%D0%B0%D1%82%D0%BE%D1%80%D0%B0
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%92%D1%82%D1%83%D0%BB%D0%BA%D0%B0%20%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D0%B8%D0%B7%D0%B0%D1%82%D0%BE%D1%80%D0%B0
+
+- Колодки передние         : 53%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%9A%D0%BE%D0%BB%D0%BE%D0%B4%D0%BA%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D0%B8%D0%B5
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%9A%D0%BE%D0%BB%D0%BE%D0%B4%D0%BA%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D0%B8%D0%B5
+
+- Лампа ближнего света     : 71%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%9B%D0%B0%D0%BC%D0%BF%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B2%D0%B5%D1%82%D0%B0
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%9B%D0%B0%D0%BC%D0%BF%D0%B0%20%D0%B1%D0%BB%D0%B8%D0%B6%D0%BD%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B2%D0%B5%D1%82%D0%B0
+
+- Свеча зажигания          : 71%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%A1%D0%B2%D0%B5%D1%87%D0%B0%20%D0%B7%D0%B0%D0%B6%D0%B8%D0%B3%D0%B0%D0%BD%D0%B8%D1%8F
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%A1%D0%B2%D0%B5%D1%87%D0%B0%20%D0%B7%D0%B0%D0%B6%D0%B8%D0%B3%D0%B0%D0%BD%D0%B8%D1%8F
+
+- Топливный фильтр         : 71%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%A2%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%A2%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80
+
+- Тормозная жидкость       : 53%
+  Купить: https://www.avito.ru/all/zapchasti_i_aksessuary?q=Haval%20Dargo%20%D0%A2%D0%BE%D1%80%D0%BC%D0%BE%D0%B7%D0%BD%D0%B0%D1%8F%20%D0%B6%D0%B8%D0%B4%D0%BA%D0%BE%D1%81%D1%82%D1%8C
+  На Drom: https://baza.drom.ru/sell_spare_parts/?query=Haval%20Dargo%20%D0%A2%D0%BE%D1%80%D0%BC%D0%BE%D0%B7%D0%BD%D0%B0%D1%8F%20%D0%B6%D0%B8%D0%B4%D0%BA%D0%BE%D1%81%D1%82%D1%8C
+
+В НОРМЕ:
+- Аккумулятор              : 30%
+- Амортизатор задний       : 26%
+- Амортизатор передний     : 26%
+- Антифриз                 : 35%
+- Вентилятор охлаждения    : 16%
+- Водяная помпа            : 23%
+- Воздушный фильтр         : 9%
+- Генератор                : 16%
+- Диски тормозные задние   : 21%
+- Диски тормозные передние : 26%
+- Катушка зажигания        : 26%
+- Колодки задние           : 42%
+- Масло трансмиссионное    : 35%
+- Опора двигателя          : 21%
+- Патрубок радиатора       : 30%
+- Прокладка ГБЦ            : 17%
+- Прокладка клапанной крышки: 35%
+- Пружина передняя         : 17%
+- Пыльник ШРУСа            : 42%
+- Радиатор охлаждения      : 17%
+- Ремень ГРМ               : 23%
+- Ремень генератора        : 47%
+- Ролик натяжителя ГРМ     : 23%
+- Рулевая тяга             : 23%
+- Рулевой наконечник       : 30%
+- Сайлентблок переднего рычага: 23%
+- Сальник коленвала        : 26%
+- Сальник привода          : 26%
+- Стартер                  : 17%
+- Стойка стабилизатора     : 42%
+- Ступичный подшипник      : 21%
+- Суппорт передний         : 17%
+- Сцепление комплект)      : 21%
+- Термостат                : 26%
+- ШРУС наружный            : 23%
+- Шаровая опора            : 30%
+
+Данные носят рекомендательный характер.
+Сформировано в АРМ Автомеханика.

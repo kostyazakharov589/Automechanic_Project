@@ -31,7 +31,7 @@ double WearCalculator::calculateDistributedKm(int baseMileage, const QList<CalcS
     }
 
     if (emptyActive > 0 && baseMileage > userEntered) {
-        return (baseMileage - userEntered) / emptyActive;//возвращаем среднее от пустого и введённого
+        return std::max(0.0, (baseMileage - userEntered) / emptyActive);//для защиты от отрицательных исел при вводе пробега
     }
     return 0;
 }

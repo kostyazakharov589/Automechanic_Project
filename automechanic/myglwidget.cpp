@@ -43,6 +43,9 @@ void MyGLWidget::mousePressEvent(QMouseEvent *event) {
                 selectedZone = "Электрика";
             }
         }
+        else if (x > 0.15 && x <= 0.60 && y > 0.25 && y < 0.65) {
+            selectedZone = "Прочее";
+        }
         else {
             selectedZone = ""; //сброс при клике в пустоту
         }

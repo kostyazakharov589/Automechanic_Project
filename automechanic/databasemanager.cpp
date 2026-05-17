@@ -17,10 +17,11 @@ databasemanager::~databasemanager()//деконструкторк для её з
             db.close();
         }
     }
+}
     if (!connectionName.isEmpty()) {//удаляем
         QSqlDatabase::removeDatabase(connectionName);
     }
-}
+
 }
 bool databasemanager::connectToDataBase()
 {

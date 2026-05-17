@@ -255,47 +255,48 @@ osnova::osnova(QWidget *parent)
     connect(ui->btnRestart, &QPushButton::clicked, this, [this]() {//кнопка в начало
         ui->stackedWidget->setCurrentIndex(0);
     });
-    connect(ui->openGLWidget, &MyGLWidget::zoneClicked, this, [this](const QString& zoneName) {//вот здесь отрисовка блоков
+    connect(ui->openGLWidget, &MyGLWidget::zoneClicked, this, [this](const QString& zoneName) { //вот здесь отрисовка блоков
         if (finalResults.isEmpty()) {
             QMessageBox::warning(this, "Пусто", "Сначала выполните расчет износа!");
             return;
         }
 
         ui->listWidgetDetails->clear();
+        ui->lblZoneName->setText("Зона осмотра: " + zoneName);//отображение названия зоны
+        QStringList targetCategories; //здесь разделяем по категориям
 
-        QStringList targetCategories;//здесь разделяем по категориям
-        if (zoneName == "Двигатель") {
-            targetCategories << "Двигатель и ГРМ" << "Охлаждение" << "Фильтры";//то что мы разделяли в инПартЗоне
+        if (zoneName == "Двигатель") {//тут категории из изпартинзона
+            targetCategories << "Двигатель и ГРМ" << "Охлаждение" << "Фильтры";
         } else if (zoneName == "Ходовая часть") {
-            targetCategories = {"Тормозная система", "Подвеска и рулевое", "Трансмиссия"};
-        } else {
+            targetCategories << "Тормозная система" << "Подвеска и рулевое" << "Трансмиссия";
+        } else if (zoneName == "Электрика") {
             targetCategories << "Электрика и прочее";
+        } else if (zoneName == "Прочее") {
+            targetCategories << "Прочее";
         }
 
         bool partsFound = false;
-        for (const auto& res : std::as_const(finalResults)) {//отрисовка блоков
+
+        for (const auto& res : std::as_const(finalResults)) { //отрисовка блоков
             if (isPartInZone(res.partName, targetCategories)) {
                 partsFound = true;
 
                 QListWidgetItem* item = new QListWidgetItem(ui->listWidgetDetails);
-                item->setData(Qt::UserRole, res.partName); // прячем оригинальное имя для двойного клика
+                item->setData(Qt::UserRole, res.partName); //прячем оригинальное имя для двойного клика
 
                 QWidget *rowWidget = new QWidget();
                 QHBoxLayout *rowLayout = new QHBoxLayout(rowWidget);
-                rowLayout->setContentsMargins(10, 5, 10, 5);//отступы
+                rowLayout->setContentsMargins(10, 5, 10, 5); //отступы
 
-                QString icon, colorCode, statusText;//иконочки
-                if (res.wearPercent >= 80) {
-                    icon = "🟥";
-                    icon = "🟨";
-                } else {
-                    icon = "🟩";
-                }
+                QString icon; //иконочки
+                if (res.wearPercent >= 80) icon = "🟥";
+                else if (res.wearPercent >= 50) icon = "🟨";
+                else icon = "🟩";
 
-                QLabel *lblIcon = new QLabel(icon);//иконка
+                QLabel *lblIcon = new QLabel(icon); //иконка
                 lblIcon->setFont(QFont("Bold", 14));
 
-                QVBoxLayout *textLayout = new QVBoxLayout();//износ и прочее
+                QVBoxLayout *textLayout = new QVBoxLayout(); //износ и прочее
                 QLabel *lblName = new QLabel(res.partName);
                 lblName->setStyleSheet("font-weight: bold; font-size: 13px; color: #FFFFFF;");
 
@@ -315,8 +316,8 @@ osnova::osnova(QWidget *parent)
             }
         }
 
-        if (!partsFound) {
-            ui->listWidgetDetails->addItem("В этой зоне все детали в норме.");
+        if (!partsFound) {//проверка
+            ui->listWidgetDetails->addItem("Нет деталей в зоне");
         }
     });
     connect(ui->listWidgetDetails, &QListWidget::itemDoubleClicked, this, [this](QListWidgetItem *item) {//вот здесь у нас заключение
@@ -391,7 +392,7 @@ osnova::~osnova()
 {
     delete ui;
 }
-bool osnova::isPartInZone(const QString& partName, const QStringList& categories) {//делим наши детальки на зоны для отображения по клику в машинке
+bool osnova::isPartInZone(const QString& partName, const QStringList& categories) {//делим наши детальки на зоны
     static QMap<QString, QStringList> catalogMap = {
         {"Фильтры", {"Масляный фильтр", "Воздушный фильтр", "Салонный фильтр", "Топливный фильтр"}},//первое у нас название, а второе что в неё входит
         {"Тормозная система", {"Колодки передние", "Колодки задние", "Диски тормозные передние", "Суппорт передний"}},
@@ -401,8 +402,17 @@ bool osnova::isPartInZone(const QString& partName, const QStringList& categories
         {"Трансмиссия", {"Сцепление", "Масло трансмиссионное", "ШРУС наружный"}},
         {"Электрика и прочее", {"Аккумулятор", "Генератор", "Стартер", "Лампа ближнего света"}}
     };
+    if (categories.contains("Прочее")) {//здесь все остальные детали
+        // пробегаемся по всем известным спискам деталей
+        for (const QStringList& knownParts : catalogMap.values()) {
+            if (knownParts.contains(partName)) {
+                return false; // если есть в известных, то не прочее
+            }
+        }
+        return true; // тут понятно
+    }
 
-    for (const QString& cat : categories) {
+    for (const QString& cat : categories) {//проверка
         if (catalogMap[cat].contains(partName)) return true;//соответствует - да?
     }
     return false;

@@ -103,6 +103,7 @@ public:
     QWidget *page_7;
     QTextEdit *textEdit_3;
     QTextEdit *textEdit_4;
+    QLabel *lblZoneName;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -859,6 +860,12 @@ public:
 "}"));
         textEdit_4->setOverwriteMode(false);
         textEdit_4->setTextInteractionFlags(Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse);
+        lblZoneName = new QLabel(page_4);
+        lblZoneName->setObjectName("lblZoneName");
+        lblZoneName->setGeometry(QRect(120, 20, 281, 21));
+        lblZoneName->setStyleSheet(QString::fromUtf8("color: #ffffff;\n"
+"font-size: 16px;\n"
+"font-weight: bold;"));
         stackedWidget->addWidget(page_4);
 
         gridLayout->addWidget(stackedWidget, 0, 0, 1, 1);
@@ -874,7 +881,7 @@ public:
 
         retranslateUi(osnova);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(4);
         stackedWidget_2->setCurrentIndex(0);
 
 
@@ -972,7 +979,8 @@ public:
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:16px; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\320\220\320\262\321\202\320\276 \320\270 \321\201\321\201\321\213\320\273\320\272\320\270</p></body></html>", nullptr));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        lblZoneName->setText(QString());
     } // retranslateUi
 
 };
