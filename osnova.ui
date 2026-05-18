@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>osnova</class>
+ <widget class="QMainWindow" name="osnova">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>886</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>osnova</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel 
+{
+    color: white;
+    background-color: #808080
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">QStackedWidget
+{
+    color: white;
+    font-size: 16px;
+
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page_5">
+       <widget class="QComboBox" name="profileSelector">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>230</y>
+          <width>391</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>-1</pointsize>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Существующие профили&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox
+{
+    color: white;
+	background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    padding: 10px;
+    font-size: 16px;
+}
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnAddNewCar">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>310</y>
+          <width>121</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>-1</pointsize>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220);
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70);
+}</string>
+        </property>
+        <property name="text">
+         <string>✅Добавить</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnDeleteProfile">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>310</y>
+          <width>121</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+        </property>
+        <property name="text">
+         <string>❌Удалить</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>70</y>
+          <width>331</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: 2px;
+    border-radius: 10px;
+    padding: 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>C:/Users/kosty/Downloads/лого.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>100</y>
+          <width>341</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox
+{
+    color: white;
+	background-color: rgb(40, 45, 55);
+    border: 2px solid rgb(37, 106, 153);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+        </property>
+        <property name="title">
+         <string>Базовый профиль автомобиля</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="mileageInput">
+           <property name="styleSheet">
+            <string notr="true">        QSpinBox { 
+          background-color: rgb(63, 73, 85); color: white; 
+          border: 2px solid rgb(37, 106, 153); border-radius: 8px; 
+          padding: 1px; font-size: 14px;
+        }</string>
+           </property>
+           <property name="maximum">
+            <number>999999999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="yearInput">
+           <property name="styleSheet">
+            <string notr="true">        QComboBox { 
+          background-color: rgb(63, 73, 85); color: white; 
+          border: 2px solid rgb(37, 106, 153); border-radius: 8px; 
+          padding: 1px; font-size: 14px;
+        }</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="Label_3">
+           <property name="styleSheet">
+            <string notr="true">font: 700 9pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Год выпуска</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="modelInput">
+           <property name="styleSheet">
+            <string notr="true">        QLineEdit { 
+          background-color: rgb(63, 73, 85); color: white; 
+          border: 2px solid rgb(37, 106, 153); border-radius: 8px; 
+          padding: 1px; font-size: 14px;
+        }</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="Label_4">
+           <property name="styleSheet">
+            <string notr="true">font: 700 9pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Базовый пробег</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="Label_2">
+           <property name="styleSheet">
+            <string notr="true">font: 700 9pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Модель </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="Label">
+           <property name="styleSheet">
+            <string notr="true">font: 700 9pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Марка авто</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="makeInput">
+           <property name="styleSheet">
+            <string notr="true">        QLineEdit { 
+          background-color: rgb(63, 73, 85); color: white; 
+          border: 2px solid rgb(37, 106, 153); border-radius: 8px; 
+          padding: 1px; font-size: 14px;
+        }</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="btnNext">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>390</y>
+          <width>261</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(37, 106, 153);
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+        </property>
+        <property name="text">
+         <string>Далее</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnBackToCar">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>520</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(37, 106, 153);
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <widget class="QTextEdit" name="textEdit">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>20</y>
+          <width>621</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit
+{
+    color: white;
+	background-color: rgb(40, 45, 55);
+    border: 2px solid rgb(37, 106, 153);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:16px; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Детализация пробега выбранного автомобиля&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="overwriteMode">
+         <bool>false</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioRefine">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>110</y>
+          <width>90</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QRadioButton {
+    color: white;
+    font: 700 14px &quot;Segoe UI&quot;;
+    spacing: 8px;
+}
+
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 9px;
+    border: 2px solid rgb(37, 106, 153);
+    background-color: rgb(63, 73, 85);
+}
+
+QRadioButton::indicator:hover {
+    border: 2px solid rgb(50, 150, 220);
+    background-color: rgb(75, 85, 100);
+}
+
+QRadioButton::indicator:checked {
+    border: 2px solid rgb(50, 150, 220);
+    background-color: qradialgradient(
+        cx: 0.5, cy: 0.5, radius: 0.4, 
+        fx: 0.5, fy: 0.5, 
+        stop: 0 rgb(50, 150, 220), 
+        stop: 0.6 rgb(50, 150, 220), 
+        stop: 0.7 rgb(63, 73, 85), 
+        stop: 1 rgb(63, 73, 85)
+    );
+}</string>
+        </property>
+        <property name="text">
+         <string>Уточнить</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioSkip">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>110</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QRadioButton {
+    color: white;
+    font: 700 14px &quot;Segoe UI&quot;;
+    spacing: 8px;
+}
+
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 9px;
+    border: 2px solid rgb(37, 106, 153);
+    background-color: rgb(63, 73, 85);
+}
+
+QRadioButton::indicator:hover {
+    border: 2px solid rgb(50, 150, 220);
+    background-color: rgb(75, 85, 100);
+}
+
+QRadioButton::indicator:checked {
+    border: 2px solid rgb(50, 150, 220);
+    background-color: qradialgradient(
+        cx: 0.5, cy: 0.5, radius: 0.4, 
+        fx: 0.5, fy: 0.5, 
+        stop: 0 rgb(50, 150, 220), 
+        stop: 0.6 rgb(50, 150, 220), 
+        stop: 0.7 rgb(63, 73, 85), 
+        stop: 1 rgb(63, 73, 85)
+    );
+}</string>
+        </property>
+        <property name="text">
+         <string>Пропустить </string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="detailsBox">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>140</y>
+          <width>621</width>
+          <height>411</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox
+{
+    color: white;
+	background-color: rgb(63, 73, 85);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+        </property>
+        <property name="title">
+         <string>                                                   ДЕТАЛИЗАЦИЯ ПРОБЕГА</string>
+        </property>
+        <widget class="QPushButton" name="btnCalculate">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>370</y>
+           <width>231</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+         </property>
+         <property name="text">
+          <string>Сохранить и продолжить</string>
+         </property>
+        </widget>
+        <widget class="QScrollArea" name="verticalLayout_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>601</width>
+           <height>271</height>
+          </rect>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="timelineLayout">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>599</width>
+            <height>269</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2"/>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="btnGenerateTimeline">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>70</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+         </property>
+         <property name="text">
+          <string>обновить</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>30</y>
+           <width>531</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QComboBox" name="spinStartYear"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cmbStartMonth">
+            <item>
+             <property name="text">
+              <string>Январь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Февраль</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Март</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Апрель</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Май</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Июнь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Июль</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Август</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Сентябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Октябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ноябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Декабрь</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="spinEndYear"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cmbEndMonth">
+            <item>
+             <property name="text">
+              <string>Январь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Февраль</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Март</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Апрель</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Май</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Июнь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Июль</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Август</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Сентябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Октябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ноябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Декабрь</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="btnBackToCar2">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>520</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(37, 106, 153);
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <widget class="QTextEdit" name="textEdit_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>20</y>
+          <width>581</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit
+{
+    color: white;
+	background-color: rgb(40, 45, 55);
+    border: 2px solid rgb(37, 106, 153);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:16px; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Заменялись ли&lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:400;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;детали&lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:400;&quot;&gt; за время эксплуатации автомобилем? &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="overwriteMode">
+         <bool>false</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioReplaceYes">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>130</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QRadioButton {
+    color: white;
+    font: 700 14px &quot;Segoe UI&quot;;
+    spacing: 8px;
+}
+
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 9px;
+    border: 2px solid rgb(37, 106, 153);
+    background-color: rgb(63, 73, 85);
+}
+
+QRadioButton::indicator:hover {
+    border: 2px solid rgb(50, 150, 220);
+    background-color: rgb(75, 85, 100);
+}
+
+QRadioButton::indicator:checked {
+    border: 2px solid rgb(50, 150, 220);
+    background-color: qradialgradient(
+        cx: 0.5, cy: 0.5, radius: 0.4, 
+        fx: 0.5, fy: 0.5, 
+        stop: 0 rgb(50, 150, 220), 
+        stop: 0.6 rgb(50, 150, 220), 
+        stop: 0.7 rgb(63, 73, 85), 
+        stop: 1 rgb(63, 73, 85)
+    );
+}</string>
+        </property>
+        <property name="text">
+         <string>ДА, менялись</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioReplaceSkip">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>130</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QRadioButton {
+    color: white;
+    font: 700 14px &quot;Segoe UI&quot;;
+    spacing: 8px;
+}
+
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 9px;
+    border: 2px solid rgb(37, 106, 153);
+    background-color: rgb(63, 73, 85);
+}
+
+QRadioButton::indicator:hover {
+    border: 2px solid rgb(50, 150, 220);
+    background-color: rgb(75, 85, 100);
+}
+
+QRadioButton::indicator:checked {
+    border: 2px solid rgb(50, 150, 220);
+    background-color: qradialgradient(
+        cx: 0.5, cy: 0.5, radius: 0.4, 
+        fx: 0.5, fy: 0.5, 
+        stop: 0 rgb(50, 150, 220), 
+        stop: 0.6 rgb(50, 150, 220), 
+        stop: 0.7 rgb(63, 73, 85), 
+        stop: 1 rgb(63, 73, 85)
+    );
+}</string>
+        </property>
+        <property name="text">
+         <string>НЕТ, не менялись</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="replaceBox">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>180</y>
+          <width>581</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox
+{
+    color: white;
+	background-color: rgb(63, 73, 85);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+        </property>
+        <property name="title">
+         <string>     Какие детали вашего автомобиля менялись во время эксплутации?</string>
+        </property>
+        <widget class="QPushButton" name="btnGoToResults">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>320</y>
+           <width>231</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+         </property>
+         <property name="text">
+          <string>Сохранить и продолжить</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cmbReplacedPart">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>40</y>
+           <width>111</width>
+           <height>24</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cmbReplaceSeason">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>111</width>
+           <height>24</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="cmbReplaceYear">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>230</y>
+           <width>111</width>
+           <height>24</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnAddReplacement">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>280</y>
+           <width>111</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+         </property>
+         <property name="text">
+          <string>+ замена</string>
+         </property>
+        </widget>
+        <widget class="QListWidget" name="listReplacements">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>40</y>
+           <width>421</width>
+           <height>261</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="btnBackToSeasons">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>520</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(37, 106, 153);
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_4">
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>841</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_results"/>
+       </widget>
+       <widget class="QPushButton" name="btnRestart">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>520</y>
+          <width>81</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(37, 106, 153);
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+        </property>
+        <property name="text">
+         <string>Начало</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnBackToHistory">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>520</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(37, 106, 153);
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+       </widget>
+       <widget class="QStackedWidget" name="stackedWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>38</x>
+          <y>38</y>
+          <width>821</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_6">
+         <widget class="MyGLWidget" name="openGLWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>30</y>
+            <width>381</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">MyGLWidget
+{
+    color: white;
+	border: 3px solid  rgb(37, 106, 153);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="resultsScrollArea">
+          <property name="geometry">
+           <rect>
+            <x>389</x>
+            <y>29</y>
+            <width>401</width>
+            <height>431</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QScrollArea
+{
+    color: white;
+	background-color: rgb(40, 45, 55);
+	border: 3px solid  rgb(37, 106, 153);
+	font: 700 12pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    font-size: 12px;
+}</string>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="resultsLayout">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>395</width>
+             <height>425</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QListWidget" name="listWidgetDetails">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>250</y>
+            <width>311</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QListWidget
+{
+    color: white;
+	background-color: rgb(25, 32, 43);
+	border: 3px solid  rgb(37, 106, 153);
+	font: 700 12pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    font-size: 12px;
+}</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnExportReport">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>260</y>
+            <width>61</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+          </property>
+          <property name="text">
+           <string>Итог</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnPredict">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>330</y>
+            <width>61</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+          </property>
+          <property name="text">
+           <string>📈</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnMaps">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>400</y>
+            <width>61</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    color: white;
+    background-color: rgb(63, 73, 85);
+    border: 2px solid rgb(37, 106, 153);
+    font: 700 9pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(75, 85, 100); 
+    border: 2px solid rgb(50, 150, 220); 
+}
+
+QPushButton:pressed {
+    background-color: rgb(50, 60, 70); 
+}</string>
+          </property>
+          <property name="text">
+           <string>🗺️</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_7"/>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_3">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>0</y>
+          <width>401</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit
+{
+    color: white;
+	background-color: rgb(40, 45, 55);
+    border: 2px solid rgb(37, 106, 153);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:16px; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Состояние запчастей&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="overwriteMode">
+         <bool>false</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_4">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>0</y>
+          <width>391</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit
+{
+    color: white;
+	background-color: rgb(40, 45, 55);
+    border: 2px solid rgb(37, 106, 153);
+	font: 700 16pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:16px; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="overwriteMode">
+         <bool>false</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lblZoneName">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>20</y>
+          <width>281</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #ffffff;
+font-size: 16px;
+font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>886</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>myglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
