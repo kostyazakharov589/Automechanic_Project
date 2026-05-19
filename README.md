@@ -13,4 +13,4 @@
 *  ☁️ **Клиент-серверная синхронизация:** Отправка готовых отчетов по сети (HTTP POST) на локальный сервер руководителя. 
 *  🗺️ **Интеграция с картами:** Поиск профильных автосервисов в Яндекс.Картах в один клик.
 
-**UML:**https://github.com/kostyazakharov589/Automechanic_Project/blob/df0432f04ec0c98a1bcf7232d9ab2a0a14f6dc67/UML.png
+**UML:https://github.com/kostyazakharov589/Automechanic_Project/blob/df0432f04ec0c98a1bcf7232d9ab2a0a14f6dc67/UML.png**
