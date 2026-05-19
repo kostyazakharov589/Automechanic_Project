@@ -5,11 +5,10 @@
 mypainter::mypainter() {}
 
 
-// Функция рисует круг через веер треугольников
 void drawCircle(float cx, float cy, float r, int num_segments) {
-    glBegin(GL_TRIANGLE_FAN);//избавляет от артефактов
-    glVertex2f(cx, cy); // Центральная точка веера
-    for (int ii = 0; ii <= num_segments; ii++) { // ВАЖНО: <= чтобы замкнуть последнюю точку с первой
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex2f(cx, cy);
+    for (int ii = 0; ii <= num_segments; ii++) {
         float theta = 2.0f * 3.1415926f * float(ii) / float(num_segments);
         glVertex2f(r * cosf(theta) + cx, r * sinf(theta) + cy);
     }

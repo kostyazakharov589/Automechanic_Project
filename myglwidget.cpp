@@ -26,7 +26,6 @@ void MyGLWidget::paintGL() {
 
 void MyGLWidget::mousePressEvent(QMouseEvent *event) {
     if (event->button() == Qt::LeftButton) {
-        // Нормализуем координаты (0.0 - 1.0)
         float x = (float)event->pos().x() / width();
         float y = (float)event->pos().y() / height();
 
@@ -52,7 +51,7 @@ void MyGLWidget::mousePressEvent(QMouseEvent *event) {
 
         if (selectedZone != lastZone) {
             emit zoneClicked(selectedZone);
-            update(); //перерисовать с желтым цветом
+            update(); //отображение жёлтого цвета
         }
     }
 }

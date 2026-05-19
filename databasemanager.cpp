@@ -30,7 +30,7 @@ bool databasemanager::connectToDataBase()
     }
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    QString dbPath = QCoreApplication::applicationDirPath() + "/cars_database.db";//берём бд из папки рядом, на других компах она просто пустую бд до этого клипала
+    QString dbPath = QCoreApplication::applicationDirPath() + "/cars_database.db";//берём бд из папки рядом
     db.setDatabaseName(dbPath);
 
    if (!db.open()) {//на случай ошибок
@@ -38,7 +38,7 @@ bool databasemanager::connectToDataBase()
         return false;
     }
 
-    QSqlQuery pragmaQuery;//активация WAL для высокой производительности + если сервер аварийно завершит работу, при перезапуске программа восстановит состояние из WAL, сохранив изменения
+    QSqlQuery pragmaQuery;//активация WAL для высокой производительности
     pragmaQuery.exec("PRAGMA journal_mode=WAL;");
     pragmaQuery.exec("PRAGMA synchronous=NORMAL;");
 

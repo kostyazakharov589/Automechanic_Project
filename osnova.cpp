@@ -148,20 +148,20 @@ osnova::osnova(QWidget *parent)
     });
 
     connect(ui->btnCalculate, &QPushButton::clicked, this, [this]() {
-        double totalBaseMileage = ui->mileageInput->value(); // наше доёбле
+        double totalBaseMileage = ui->mileageInput->value(); // общий пробег с первой страницы
         double totalEntered = 0.0;
         int emptyCount = 0;
 
-        for (const auto &entry : std::as_const(generatedSeasons)) {//проверка по введённом + чтобы от утечки избавиться используем блок неявного копирования контейнера черещ as_const
+        for (const auto &entry : std::as_const(generatedSeasons)) {
             double val = entry.spinKm->value();
             if (val > 0.001) {
                 totalEntered += val;
-            } else {
+            } else if (entry.cmbRoad->currentText() != "Гараж") {//что не гараж
                 emptyCount++;
             }
         }
 
-        if (totalEntered > totalBaseMileage + 0.01) {//если больше и через .arg
+        if (totalEntered > totalBaseMileage + 0.1) {//проверка
             QMessageBox::warning(this, "Ошибка пробега",
                                  QString("Введенный пробег по сезонам (%1 км) превышает общий пробег автомобиля (%2 км)!")
                                      .arg(totalEntered, 0, 'f', 2)
@@ -169,15 +169,23 @@ osnova::osnova(QWidget *parent)
             return;
         }
 
-        if (emptyCount == 0 && totalEntered < totalBaseMileage - 0.01) {//если меньше и через тоже арг
+        if (emptyCount == 0 && totalEntered < totalBaseMileage - 1.0) {//проверка на нехватку с погрешностью
             QMessageBox::warning(this, "Ошибка пробега",
-                                 QString("Сумма по всем сезонам (%1 км) меньше базового пробега (%2 км)!\nОставьте часть сезонов с '0' для автораспределения.")
+                                 QString("Сумма по всем сезонам (%1 км) меньше базового пробега (%2 км)!\nОставьте часть сезонов с '0' (и не 'Гараж') для автораспределения.")
                                      .arg(totalEntered, 0, 'f', 2)
                                      .arg(totalBaseMileage, 0, 'f', 2));
             return;
         }
 
-        ui->stackedWidget->setCurrentIndex(3);//некст
+        double avgKm = calculateEffectiveMileage(); //автозаполнение
+        for (const auto &entry : std::as_const(generatedSeasons)) {
+            if (entry.spinKm->value() < 0.01 && entry.cmbRoad->currentText() != "Гараж") {
+                entry.spinKm->setValue(avgKm);
+            }
+        }
+
+        // Переходим на следующую страницу
+        ui->stackedWidget->setCurrentIndex(3);
         prepareReplacementsPage();
     });
     connect(ui->btnGenerateTimeline, &QPushButton::clicked, this, &osnova::generateTimeline);
@@ -854,7 +862,7 @@ void osnova::exportReport() {//формируем отчёт по нашей п�
 
     file.close(); // закрываем файл
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-    QUrl url("http://127.0.0.1:5000/upload"); // адрес локального сервера
+    QUrl url("http://192.168.1.244:5000/upload"); // адрес локального сервера
     QNetworkRequest request(url);
 
     QHttpMultiPart *multiPart = new QHttpMultiPart(QHttpMultiPart::FormDataType);
@@ -904,7 +912,7 @@ void osnova::deleteSelectedProfile() {//удаление профиля чере
                                       QString("Вы действительно хотите навсегда стереть профиль автомобиля: %1?").arg(profileToDelete),
                                       QMessageBox::Yes | QMessageBox::No);//да и нет
         if (reply == QMessageBox::Yes) {
-            QString path = "profiles/" + profileToDelete + ".json";//путь к файлу
+             QString path = "profiles/" + currentUser + "/" + profileToDelete + ".json";//путь к файлу
             if (QFile::remove(path)) {//команда на физическое удаление файла с диска
                 ui->profileSelector->clear();//обновляем список профилей на 1 страничке
                 ui->profileSelector->addItems(dbManager.getSavedProfiles(currentUser));

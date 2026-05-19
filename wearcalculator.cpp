@@ -18,14 +18,14 @@ void WearCalculator::setCatalog(const QMap<QString, int>& catalog) {
 }
 
 double WearCalculator::calculateDistributedKm(int baseMileage, const QList<CalcSeasonData>& history) {//функция для подсчёта км если больше 0 и не гараж
-    double userEntered = 0.0;//введённое
+    double userEntered = 0.0;//введённое юзером
     int emptyActive = 0;//пустое
 
     for (const auto& entry : history) {//перебираем
         if (entry.km > 0.0) {//если больше 0, то скалдываем с введённым юзером
             userEntered += entry.km;
         }
-        else if (entry.roadType != "Гараж") { //если гараж -  с пустым
+        else if (entry.roadType != "Гараж") { //для гаража
             emptyActive++;
         }
     }
@@ -50,7 +50,7 @@ QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSea
 
     double distributedKm = calculateDistributedKm(baseMileage, history);
 
-    for (auto it = partCatalog.begin(); it != partCatalog.end(); ++it) {//самое первое - базовое старение за годы работы
+    for (auto it = partCatalog.begin(); it != partCatalog.end(); ++it) {//цикл проверки замен деталей
         QString partName = it.key();
         int maxResource = it.value();
 
@@ -93,11 +93,11 @@ QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSea
             wearPercent = (totalEffectiveKm / maxResource) * 100;//считаем процент беря наши км и из базы заводской износ, делим их и умножаем на сотку
         }
 
-        int age = currentYear - startYear;//а вот тут второе - хронологическое старение
+        int age = currentYear - startYear;//хронологическое старение
         if (age >= 5 && (partName.contains("Ремень") || partName.contains("Шина") ||
                          partName.contains("Сайлентблок") || partName.contains("Патрубок") ||
                          partName.contains("Масло") || partName.contains("Антифриз"))) {
-            wearPercent += (age - 4) * 15; // накидываем 15 процентов за 4 года, +- максимально усредненнёное значение, но пойдёт
+            wearPercent += (age - 4) * 15; // накидываем 15 процентов за 4 года, +- максимально усредненнёное значение
         }
 
         results.append({partName, wearPercent});
@@ -106,9 +106,9 @@ QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSea
     int suspensionWear = 0;
     int suspensionPartsCount = 0;
 
-    for (const auto& res : std::as_const(results)) { // вычисление убитости подвестки без лишнего копирования массива
+    for (const auto& res : std::as_const(results)) { // вычисление убитости подвестки
         if (res.partName.contains("Амортизатор") || res.partName.contains("Рычаг") || res.partName.contains("Стойка")) {
-            suspensionWear += res.wearPercent;//добавляем к проценту и
+            suspensionWear += res.wearPercent;//добавляем к проценту
             suspensionPartsCount++;
         }
     }
@@ -125,8 +125,7 @@ QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSea
             }
         }
 
-        /////ФИНАЛ - все введённые до этого коэфы
-        if (res.wearPercent > 100) res.wearPercent = 100;
+        if (res.wearPercent > 100) res.wearPercent = 100;//тпроврка если перевалить за 100
     }
 
     return results;//наш результатик
