@@ -1,0 +1,60 @@
+{
+    "endMonthIdx": 3,
+    "endYear": 2024,
+    "make": "Lada",
+    "mileage": 12000,
+    "model": "Vesta NG",
+    "replacements": [
+        {
+            "partName": "Ремень ГРМ",
+            "season": "Лето",
+            "year": 2024
+        },
+        {
+            "partName": "Втулка стабилизатора",
+            "season": "Лето",
+            "year": 2024
+        }
+    ],
+    "startMonthIdx": 0,
+    "startYear": 2023,
+    "timeline": [
+        {
+            "km": 1200,
+            "road_k": "Грунтовые",
+            "season": "Зима",
+            "year": 2023
+        },
+        {
+            "km": 1300,
+            "road_k": "Грунтовые",
+            "season": "Весна",
+            "year": 2023
+        },
+        {
+            "km": 0,
+            "road_k": "Гараж",
+            "season": "Лето",
+            "year": 2023
+        },
+        {
+            "km": 3166,
+            "road_k": "Город",
+            "season": "Осень",
+            "year": 2023
+        },
+        {
+            "km": 3166,
+            "road_k": "Город",
+            "season": "Зима",
+            "year": 2024
+        },
+        {
+            "km": 3166,
+            "road_k": "Город",
+            "season": "Весна",
+            "year": 2024
+        }
+    ],
+    "year": 2023
+}
