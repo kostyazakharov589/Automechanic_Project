@@ -132,7 +132,7 @@ QList<PartResult> WearCalculator::calculate(int baseMileage, const QList<CalcSea
 }
 QList<PredictionData> WearCalculator::predictService(const QList<PartResult>& results, double dailyKm) {//тут калькулятор прогноза
     QList<PredictionData> predictions;
-    if (dailyKm <= 0) dailyKm = 40.0;
+    if (dailyKm <= 0) dailyKm = 40.0;//тут если вообще ничё на третьей странице не ввели 
 
     QList<PartResult> sorted = results;//от большего к меньшему
     std::sort(sorted.begin(), sorted.end(), [](const PartResult& a, const PartResult& b) {
