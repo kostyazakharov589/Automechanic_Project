@@ -16,4 +16,4 @@
 **UML:https://github.com/kostyazakharov589/Automechanic_Project/blob/df0432f04ec0c98a1bcf7232d9ab2a0a14f6dc67/UML.png**
 
 
-**отчёт: https://github.com/kostyazakharov589/Automechanic_Project/blob/7f5ca583a9e1b25b78ffa744bba0c2fafa6e1fcd/automechanic/%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D0%90%D0%A0%D0%9C%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D0%B8%D0%BA%D0%B0_%20%D0%9E%D1%82%D1%87%D0%B5%D1%82.docx**
+**отчёт: [ссылка](https://github.com/kostyazakharov589/Automechanic_Project/blob/7f5ca583a9e1b25b78ffa744bba0c2fafa6e1fcd/automechanic/%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D0%90%D0%A0%D0%9C%20%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D0%B8%D0%BA%D0%B0_%20%D0%9E%D1%82%D1%87%D0%B5%D1%82.docx)**
